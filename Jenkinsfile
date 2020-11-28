@@ -1,10 +1,5 @@
 pipeline { 
   agent any 
-  node {
-    env.NODEJS_HOME = "${tool 'Node 5.8'}"
-    env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
-    sh 'npm --version'
-  }
 
   tools {nodejs "node"} 
   stages { 
